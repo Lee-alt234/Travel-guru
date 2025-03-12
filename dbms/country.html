@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Tagline section with background image */
+        .tagline-section {
+            text-align: center;
+            padding: 150px 20px;  /* Adjusted padding for better layout */
+            background: url('https://hips.hearstapps.com/hmg-prod/images/great-ocean-road-174028267-1494616481.jpg?crop=0.888888888888889xw:1xh;center,top&resize=2048:*') no-repeat center center;
+            background-size: cover; /* Makes sure the image covers the entire section */
+             /* Ensures text is visible on the background */
+        }
+        .tagline-section h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #040404;
+        }
+        .tagline-section p {
+            font-size: 1.7em;
+            margin-top: 10px;
+            color: #3e3e3e;
+        }
+        /* Section and country box styling */
+        .popular-section {
+            margin: 30px 0;
+            padding: 80px;
+            border-bottom: 2px solid #ccc;
+            background:url('https://img.freepik.com/free-photo/pouch-map-toy-airplane-blue-background-with-space-writing-text_23-2147958180.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .popular-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .desert-section {
+            margin: 30px 0;
+            padding: 100px;
+            border-bottom: 2px solid #ccc;
+            background:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKr79XKlvj7CA8Twc5FsGV_pENdWnGkYUuA&s');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .desert-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .snow-section {
+            margin: 30px 0;
+            padding: 80px;
+            border-bottom: 2px solid #ccc;
+            background:url('https://thumbs.dreamstime.com/b/serene-winter-landscape-sunlit-snow-covered-trees-tranquil-park-early-morning-hours-wide-web-banner-blankets-340963072.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .snow-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .country-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .country-box {
+            width: 350px;
+            height: 300px; /* Adjusted height to fit the image */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+            background-size: cover; /* Ensure the image covers the box */
+            background-position: center center; /* Centers the image */
+            color: rgb(0, 0, 0); /* Makes text white for contrast */
+            text-align: center;
+            overflow: hidden; /* Ensures the image doesn't overflow */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .country-box:hover {
+            background-color: rgba(0,0,0,0.5); /* Slight darkening effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Tagline Section with Background Image -->
+<div class="tagline-section">
+    <h1>Discover the World with Us</h1>
+    <p>Explore our curated selection of destinations, tailored for every type of traveler.</p>
+</div>
+
+<!-- Popular Countries Section -->
+<div class="popular-section" id="popular-countries">
+    <h2>Popular Countries</h2>
+    <div class="country-container">
+        <a href="america.php" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXkk50csGoTWzvPwdsqH25LXct7JtLlUgdLw&s');">America</a>
+        <a href="hotels.php?country=Italy" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6lnj6Skibxy2um8M1rZ2NZ30w9hib4lyBEw&s');">Italy</a>
+        <a href="hotels.php?country=Japan" class="country-box" style="background-image: url('https://img.freepik.com/premium-photo/fuji-mountain-cherry-blossoms-spring-japan_980225-1179.jpg');">Japan</a>
+    </div>
+</div>
+
+<!-- Desert Countries Section -->
+<div class="desert-section" id="desert-countries">
+    <h2>Desert Countries</h2>
+    <div class="country-container">
+        <a href="hotels.php?country=Egypt" class="country-box" style="background-image: url('https://media.istockphoto.com/id/177047347/photo/the-pyramids-of-giza.jpg?s=612x612&w=0&k=20&c=sNOn3ruKWcJD1bqi4AVgU7yNt7nChIA30oLfUfsZ4Ro=');">Egypt</a>
+        <a href="hotels.php?country=Saudi Arabia" class="country-box" style="background-image: url('https://t4.ftcdn.net/jpg/03/81/67/73/360_F_381677326_TlAhxQgP8xCCJ7Dcx70O1Bok3S5OPxwj.jpg');">UAE</a>
+        <a href="hotels.php?country=Morocco" class="country-box" style="background-image: url('https://media.istockphoto.com/id/1294321554/photo/koutoubia-mosque-in-the-morning-marrakesh-morocco.jpg?s=612x612&w=0&k=20&c=pT-d0PhwqvBYqT6_fTHzUUCdxlXCnNk-HN1rYqlH0k0=');">Morocco</a>
+    </div>
+</div>
+
+<!-- Snow Countries Section -->
+<div class="snow-section" id="snow-countries">
+    <h2>Snow Countries</h2>
+    <div class="country-container">
+        <a href="hotels.php?country=Switzerland" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT6ujbfMC_pL5DSduMgIQlP_VReHja30c8zg&s');">Switzerland</a>
+        <a href="hotels.php?country=Canada" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48ufUPlZg5A_l1hp5JA_Ya4kMHEqZFQ3NcQ&s');">Canada</a>
+        <a href="hotels.php?country=Norway" class="country-box" style="background-image: url('https://i.natgeofe.com/k/679e983c-4461-4398-bb6d-9b508fe3e4de/norway-northern-lights_4x3.jpg');">Norway</a>
+    </div>
+</div>
+
+</body>
+</html>

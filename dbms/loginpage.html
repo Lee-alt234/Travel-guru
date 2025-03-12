@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>travel website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome to Travel Guru</h2>
+            <div class="form-toggle">
+                <button id="login-toggle" class="toggle-button active">Login</button>
+                <button id="register-toggle" class="toggle-button">Register</button>
+            </div>
+
+            <!-- User Login Form -->
+            <form id="login-form" class="form active" action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn-login">Login</button>
+                </div>
+            </form>
+
+            <!-- User Register Form -->
+            <form id="register-form" class="form" action="register.php" method="POST">
+                <div class="input-group">
+                    <label for="register-name">Name:</label>
+                    <input type="text" id="register-name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-pno">Phone no:</label>
+                    <input type="number" id="register-pno" name="pno" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm_password" required>
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn-register">Register</button>
+                </div>
+            </form>
+
+            <!-- Admin Login Button -->
+            <div class="extra-options">
+                <p>Are you an admin?</p>
+                <a href="adminlogin.php" class="admin-login-btn">Admin Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginToggle = document.getElementById('login-toggle');
+        const registerToggle = document.getElementById('register-toggle');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        loginToggle.addEventListener('click', () => {
+            loginForm.classList.add('active');
+            registerForm.classList.remove('active');
+            loginToggle.classList.add('active');
+            registerToggle.classList.remove('active');
+        });
+
+        registerToggle.addEventListener('click', () => {
+            registerForm.classList.add('active');
+            loginForm.classList.remove('active');
+            registerToggle.classList.add('active');
+            loginToggle.classList.remove('active');
+        });
+    </script>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-travel-around-the-world-travel-poster-template-image_140335.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: blanchedalmond;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+a
+{
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.btn-login, .btn-register {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-login:hover, .btn-register:hover {
+    background-color: #7f6bff;
+}
+
+.extra-options {
+    margin-top: 1rem;
+}
+
+.extra-options a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.admin-login-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: rgb(57, 55, 55);
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .admin-login-btn:hover {
+            background-color: #7f6bff;
+        }
+
+        /* Positioning for the admin login link */
+        .extra-options {
+            margin-top: 2rem;
+        }
+
+        .extra-options p {
+            font-size: 1rem;
+            color: #000000;
+        }
+    </style>
+</body>
+</html>

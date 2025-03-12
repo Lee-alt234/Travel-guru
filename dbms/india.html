@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India</title>
+    <style>
+        /* Basic page styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Tagline section with background image */
+        .tagline-section {
+            text-align: center;
+            padding: 150px 20px;  /* Adjusted padding for better layout */
+            background: url('https://img.freepik.com/free-vector/indian-flag-theme-independence-day-15th-august-celebration-background_1055-18094.jpg?semt=ais_hybrid') no-repeat center center;
+            background-size: cover; /* Makes sure the image covers the entire section */
+            position:relative;
+        }
+        
+        .tagline-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2); /* Black with 50% transparency */
+        z-index: 1; /* Places the overlay above the background but below the content */
+    }
+        .tagline-section h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #040404;
+        }
+        .tagline-section p {
+            font-size: 1.7em;
+            margin-top: 10px;
+            color: #3e3e3e;
+        }
+        /* Section and country box styling */
+        
+        .tropical-section, .hot-section, .northeast-section {
+            margin: 30px 0;
+            padding: 80px;
+            border-bottom: 2px solid #ccc;
+        }
+        .tropical-section {
+            background: url('https://i.cdn.newsbytesapp.com/images/l91020220108152620.jpeg');
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+        .hot-section {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSarpdjoW9UGnoUnk3BPOlYiu9VPQx-b28wcg&s');
+            background-size: cover;
+            background-position: center center;
+        }
+        .northeast-section {
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8BtSyzU1L18DJGcTwrAD0UNrVZbs-3pXVYw&s');
+            background-size: cover;
+            background-position: center center;
+        }
+        .tropical-section h2, .hot-section h2, .northeast-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .country-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .country-box {
+            width: 350px;
+            height: 300px; /* Adjusted height to fit the image */
+            border-radius: 8px;
+            display: flex;
+            align-items: down;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor: pointer;
+            background-size: cover; /* Ensure the image covers the box */
+            background-position: center center; /* Centers the image */
+            color: rgb(0, 0, 0); /* Makes text white for contrast */
+            text-align: center;
+            overflow: hidden; /* Ensures the image doesn't overflow */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .country-box:hover {
+            background-color: rgba(0, 0, 0, 0.5); /* Slight darkening effect on hover */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Tagline Section with Background Image -->
+<div class="tagline-section">
+    <h1>Explore Incredible India</h1>
+    <p>From the tropical beaches to the snowy mountains, experience the diverse beauty of India.</p>
+</div>
+
+<!-- Tropical India Section -->
+<div class="tropical-section" id="tropical-india">
+    <h2>Tropical India</h2>
+    <div class="country-container">
+        <a href="hotels.php?region=Kerala" class="country-box" style="background-image: url('https://travloger.in/wp-content/uploads/2024/04/wp7877187-alappuzha.jpg');">Kerala</a>
+        <a href="goa.php" class="country-box" style="background-image: url('https://blog.thomascook.in/wp-content/uploads/2017/11/Untitled-design-067-1.png');">Goa</a>
+        <a href="hotels.php?region=Andaman" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIRuZ0W2ICdMLtH7MKXKGAJUHGNeeJGB6Uw&s');">Andaman & Nicobar</a>
+    </div>
+</div>
+
+<!-- Hot & Desert Regions Section -->
+<div class="hot-section" id="hot-india">
+    <h2>Hot & Desert Regions</h2>
+    <div class="country-container">
+        <a href="hotels.php?region=Rajasthan" class="country-box" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/f9/rajasthan.jpg?w=1400&h=1400&s=1');">Rajasthan</a>
+        <a href="hotels.php?region=Gujarat" class="country-box" style="background-image: url('https://cdn.britannica.com/39/124439-050-AFA5CEC6/Sun-Temple-Modhera-Gujarat-India.jpg');">Gujarat</a>
+        <a href="hotels.php?region=Kutch" class="country-box" style="background-image: url('https://i.pinimg.com/736x/54/55/ed/5455ed4c7a8904f5058cc017b6922aaf.jpg');">Kutch</a>
+    </div>
+</div>
+
+<!-- Northeast India Section -->
+<div class="northeast-section" id="northeast-india">
+    <h2>Northeast India</h2>
+    <div class="country-container">
+        <a href="hotels.php?region=Assam" class="country-box" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ-OzpCLH8I9F7MqstuKo2TVnEAIbwcIDIsg&s');">Assam</a>
+        <a href="hotels.php?region=Sikkim" class="country-box" style="background-image: url('https://www.sikkimtourismindia.com/uploads/north-sikkim-tour.jpg');">Sikkim</a>
+        <a href="hotels.php?region=Meghalaya" class="country-box" style="background-image: url('https://vistaramagazine.com/wp-content/uploads/2023/07/Cover-Story-Meghalaya-.jpg');">Meghalaya</a>
+    </div>
+</div>
+
+</body>
+</html>
