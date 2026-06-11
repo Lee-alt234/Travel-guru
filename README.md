@@ -1,5 +1,5 @@
 # Travel Guru
-Travel Guru is a dynamic travel website designed to showcase and book travel packages and hotels seamlessly. Built using HTML, CSS, JavaScript, and XAMPP, it provides a user-friendly interface for travelers.
+Travel Guru is a dynamic travel website designed to showcase and book travel packages and hotels seamlessly. Built using HTML, CSS, JavaScript,  it provides a user-friendly interface for travelers.
 
 # Features
 Browse travel packages by country, region, and theme.
